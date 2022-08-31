@@ -18,17 +18,20 @@
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "bem": "^2.0.0",
-    "bem-tools": "^0.0.1",
+    "bem-components": "^6.0.1",
+    "bem-core": "^4.2.1",
+    "bem-tools-create": "^2.1.0",
     "browser-sync": "^2.27.10",
     "csscomb": "^4.3.0",
     "gulp": "^4.0.2",
+    "gulp-bem-bundle-builder": "^0.1.5",
+    "gulp-bem-bundler-fs": "^0.0.10",
+    "gulp-bem-xjst": "^3.1.1",
     "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^3.1.0",
-    "gulp-filter": "^7.0.0",
+    "gulp-debug": "^4.0.0",
     "gulp-livereload": "^4.0.2",
     "gulp-sass": "^5.1.0",
-    "gulp-stylus": "^2.7.1",
-    "sass": "^1.54.5"
+    "sass": "^1.54.7"
   },
   "private": true
 }
