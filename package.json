@@ -30,8 +30,13 @@
     "gulp-concat": "^2.6.1",
     "gulp-debug": "^4.0.0",
     "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.54.7"
+    "merge2": "^1.4.1",
+    "postcss-url": "^10.1.3",
+    "sass": "^1.54.7",
+    "through2-filter": "^3.0.0",
+    "ym": "^0.1.2"
   },
   "private": true
 }

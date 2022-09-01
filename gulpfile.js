@@ -9,6 +9,10 @@ const BemBuilder = require("gulp-bem-bundle-builder");
 const bundler = require("gulp-bem-bundler-fs");
 const debug = require("gulp-debug");
 const bemxjst = require("gulp-bem-xjst");
+const merge = require("merge2");
+const through2_filter = require("through2-filter");
+const postcss = require("gulp-postcss");
+const postcssUrl = require("postcss-url");
 // const through2Filter = require("through2-filter");
 
 
@@ -17,6 +21,8 @@ const blocksPath = `${sourcePath}/blocks`
 const bundlesPath = `${sourcePath}/bundles`
 const buildPath = "build"
 
+const pathToYm = require.resolve("ym");
+const filter = through2_filter.obj;
 const sass = gulpSass(dartSass);
 const bemhtml = bemxjst.bemhtml;
 const toHtml = bemxjst.toHtml;
@@ -47,11 +53,23 @@ function build() {
                 (
                     bundle.src("css")
                     .pipe(sass().on("error", sass.logError))
+                    .pipe(postcss([
+                        postcssUrl({url: "rebase"})
+                    ]))
                     .pipe(concat(bundle.name + ".min.css"))
                 ),
             js: bundle =>
                 (
-                    bundle.src("js")
+                    merge(
+                        gulp.src(pathToYm),
+                        bundle.src("js").pipe(filter(f => ~["vanilla.js", "browser.js", "js"].indexOf(f.tech))),
+                        (
+                            bundle.src("js")
+                            .pipe(filter(file => file.tech === "bemhtml.js"))
+                            .pipe(concat("browser.bemhtml.js"))
+                            .pipe(bemhtml({elemJsInstances: true, exportName: "BEMHTML"}))
+                        )
+                    )
                     .pipe(concat(bundle.name + ".min.js"))
                 ),
             tmpls: bundle =>
