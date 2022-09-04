@@ -1,0 +1,6 @@
+mixin header(data)
+    //- type: {title: str}
+
+    header.header&attributes(attributes)
+        a.header__title(href="#") #{data.title}
+        block

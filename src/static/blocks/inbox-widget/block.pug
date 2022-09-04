@@ -1,0 +1,12 @@
+mixin inbox-widget(data)
+    //- type: [{img_src: str, img_alt: Optional[str], name: str, phrase: str, time: str}, ...]
+
+    .inbox-widget&attributes(attributes)
+        each item in data
+            .inbox-widget__item
+                .inbox-widget__item-user
+                    img.inbox-widget__item-user-avatar(src=item.img_src alt=item.alt_src)
+                    .inbox-widget__item-user-text
+                        .inbox-widget__item-user-text-name #{item.name}
+                        .inbox-widget__item-user-text-phrase #{item.phrase}
+                .inbox-widget__item-time #{item.time}

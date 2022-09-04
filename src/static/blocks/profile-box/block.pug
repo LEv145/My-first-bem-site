@@ -1,0 +1,16 @@
+mixin profile-box(data)
+    //- type: {img_src: str, img_alt: Optional[str], name: str, email: str, status_theme: Optional[str], status_title: str}
+
+    - const img_src = data.img_src
+    - const img_alt = data.img_alt || undefined
+    - const name = data.name
+    - const email = data.email
+    - const status_theme = data.status_theme || undefined
+    - const status_title = data.status_title
+
+    .profile-box&attributes(attributes)
+        img.profile-box__logo(src=img_src alt=img_alt)
+        .profile-box__info-box
+            .profile-box__info-box-name #{name}
+            .profile-box__info-box-email #{email}
+            .profile-box__info-box-status(data-theme=status_theme) #{status_title}

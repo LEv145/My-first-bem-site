@@ -1,0 +1,8 @@
+mixin widget-chart-1(data)
+    //- type: {title: str, description: str}
+
+    .widget-chart-1&attributes(attributes)
+        .widget-chart-1__circular-progress-bar
+        .widget-chart-1__revenue-box
+            .widget-chart-1__revenue-box-title #{data.title}
+            .widget-chart-1__revenue-box-description #{data.description}

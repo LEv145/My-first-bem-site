@@ -1,0 +1,8 @@
+mixin user-box(data)
+    //- type: {img_src: str, img_alt: Optional[str], title: str}
+
+    .user-box&attributes(attributes)
+        img.user-box__icon(src=data.img_src alt=data.img_alt)
+        .user-box__title
+            span.user-box__title-name #{data.title}
+            span.user-box__title-icon

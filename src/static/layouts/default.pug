@@ -1,0 +1,50 @@
+include ../blocks/wrapper/block
+include ../blocks/header/block
+include ../blocks/horizontal-nav-menu/block
+include ../blocks/search-form/block
+include ../blocks/notification-box/block
+include ../blocks/user-box/block
+include ../blocks/settings-box/block
+include ../blocks/content/block
+include ../blocks/footer/block
+include ../blocks/page/block
+
+
+mixin default_layouts(data)
+    //- type: {title: str}
+
+    doctype html
+    html
+        head(lang="en")
+            meta(charset="utf-8")
+            title #{data.title}
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            link(rel="stylesheet" href="style.css")
+            link(rel="shortcut icon" href="./favicon.ico")
+
+        +page
+            +wrapper
+                +header({title: "Dashboard"})
+                    +horizontal-nav-menu
+                        +search-form({placeholder: "Search..."}).horizontal-nav-menu__item
+                        +notification-box({counter: 9})(class="header__notification-box").horizontal-nav-menu__item
+                        +user-box({
+                            img_src: "./uploads/user-1.jpg",
+                            img_alt: "User 1",
+                            title: "Nowak",
+                        }).horizontal-nav-menu__item
+                        +settings-box()(class="header__settings-box").horizontal-nav-menu__item
+
+                +content
+                    block content
+
+                +footer({
+                    description: "2022 © Adminto theme",
+                    links: [
+                        {href: "#", title: "About Us"},
+                        {href: "#", title: "Help"},
+                        {href: "#", title: "Contact Us"},
+                    ]
+                })
+
+            script(src="script.js")

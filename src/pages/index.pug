@@ -1,0 +1,132 @@
+include ../static/layouts/default
+
+include ../static/blocks/widget-chart-1/block
+include ../static/blocks/card-body/block
+include ../static/blocks/card/block
+include ../static/blocks/statistics-box-1/block
+include ../static/blocks/statistics-box-2/block
+include ../static/blocks/statistics-box-3/block
+include ../static/blocks/statistics-box-4/block
+include ../static/blocks/widget-chart-2/block
+include ../static/blocks/profile-box/block
+include ../static/blocks/inbox-widget/block
+
+//- FIX ME
++default_layouts({title: "Dashboard | Adminto"})
+    block content
+        +statistics-box-1
+            +card(class="statistics-box-1__card")
+                +card-body({title: "Total Revenue"})
+                    .statistics-box-1__card-content
+                        +widget-chart-1({title: "256", description: "Revenue today"})
+
+            +card(class="statistics-box-1__card")
+                +card-body({title: "Sales Analytics"})
+                    .statistics-box-1__card-content
+                        +widget-chart-2({value: 77})
+
+            +card(class="statistics-box-1__card")
+                +card-body({title: "Statistics"})
+                    .statistics-box-1__card-content
+                        +widget-chart-1({title: "4569", description: "Revenue today"})
+
+            +card(class="statistics-box-1__card")
+                +card-body({title: "Daily Sales"})
+                    .statistics-box-1__card-content
+                        +widget-chart-2({value: 77, theme: "pink"})
+
+        +statistics-box-2
+            +card(class="statistics-box-2__card")
+                +card-body({title: "Total Revenue"})
+
+            +card(class="statistics-box-2__card")
+                +card-body({title: "Total Revenue"})
+
+            +card(class="statistics-box-2__card")
+                +card-body({title: "Total Revenue"})
+
+        +statistics-box-3
+            +card(class="statistics-box-3__card")
+                +profile-box({
+                    img_src: "./uploads/user-3.jpg",
+                    img_alt: "User 3",
+                    name: "Chadengle",
+                    email: "coderthemes@gmail.com",
+                    status_theme: "admin",
+                    status_title: "Admin",
+                })
+
+            +card(class="statistics-box-3__card")
+                +profile-box({
+                    img_src: "./uploads/user-2.jpg",
+                    img_alt: "User 2",
+                    name: "Chadengle",
+                    email: "coderthemes@gmail.com",
+                    status_theme: "support",
+                    status_title: "Support Lead",
+                })
+
+            +card(class="statistics-box-3__card")
+                +profile-box({
+                    img_src: "./uploads/user-1.jpg",
+                    img_alt: "User 1",
+                    name: "Stillnotdavid",
+                    email: "coderthemes@gmail.com",
+                    status_theme: "desiner",
+                    status_title: "Desiner",
+                })
+
+            +card(class="statistics-box-3__card")
+                +profile-box({
+                    img_src: "./uploads/user-10.jpg",
+                    img_alt: "User 10",
+                    name: "Tomaslau",
+                    email: "coderthemes@gmail.com",
+                    status_theme: "developer",
+                    status_title: "Developer",
+                })
+
+        +statistics-box-4
+            +card(class="statistics-box-4__card")
+                +card-body({title: "Inbox"})
+                    .card-body__content
+                        +inbox-widget([
+                            {
+                                img_src: "./uploads/user-1.jpg",
+                                img_alt: "User 1",
+                                name: "Chadengle",
+                                phrase: "Hey! there I\"m available...",
+                                time: "13:40 PM",
+                            },
+                            {
+                                img_src: "./uploads/user-2.jpg",
+                                img_alt: "User 2",
+                                name: "Tomaslau",
+                                phrase: "I\"ve finished it! See you so...",
+                                time: "13:34 PM",
+                            },
+                            {
+                                img_src: "./uploads/user-3.jpg",
+                                img_alt: "User 3",
+                                name: "Stillnotdavid",
+                                phrase: "This theme is awesome!",
+                                time: "13:17 PM",
+                            },
+                            {
+                                img_src: "./uploads/user-4.jpg",
+                                img_alt: "User 4",
+                                name: "Kurafire",
+                                phrase: "Nice to meet you",
+                                time: "12:20 PM",
+                            },
+                            {
+                                img_src: "./uploads/user-5.jpg",
+                                img_alt: "User 5",
+                                name: "Shahedk",
+                                phrase: "Hey! there I\"m available...",
+                                time: "10:15 AM",
+                            },
+                        ])(class="statistics-box-4__inbox-widget")
+
+            +card(class="statistics-box-4__card")
+                +card-body({title: "Total Revenue"})

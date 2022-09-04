@@ -1,0 +1,8 @@
+mixin card-body(data)
+    //- type: {title: str}
+
+    .card-body&attributes(attributes)
+        .card-body__header
+            .card-body__header-title #{data.title}
+            span.card-body__header-icon
+        block

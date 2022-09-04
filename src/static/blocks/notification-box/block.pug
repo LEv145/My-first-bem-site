@@ -1,0 +1,6 @@
+mixin notification-box(data)
+    //- type: {counter: int}
+
+    .notification-box&attributes(attributes)
+        span.notification-box__icon
+        span.notification-box__counter #{data.counter}

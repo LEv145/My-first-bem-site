@@ -1,0 +1,6 @@
+mixin widget-chart-2(data)
+    //- type: {value: str, theme: Optional[str]}
+
+    .widget-chart-2&attributes(attributes)
+        .widget-chart-2__info
+        .widget-chart-2__progress-bar(style={"--value": data.value}, data-theme=data.theme)

@@ -24,11 +24,15 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
-    "gulp-filter": "^7.0.0",
     "gulp-livereload": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-stylus": "^2.7.1",
     "sass": "^1.54.5"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "ttf2woff2": "^4.0.5"
+  }
 }
