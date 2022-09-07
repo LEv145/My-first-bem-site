@@ -1,0 +1,48 @@
+@import "../i-font/block"
+
+
+.notification-box
+    position: relative
+
+    display: grid
+
+    width: 50px
+
+    background-image: url("image.jpg")
+
+    place-content: center center
+
+    &__icon
+        position: relative
+
+        cursor: pointer
+
+        color: #dee2e6
+
+        @include i-font_feather()
+        font-size: 21px
+
+        &::before
+            content: "\e836"
+
+
+    &__counter
+        position: absolute
+        top: 16px
+        right: 10px
+
+        display: grid
+
+        box-sizing: border-box
+        width: 16px
+        height: 16px
+
+        color: #fff
+        border-radius: 50%
+        background-color: #ff5b5b
+
+        @include i-font_roboto
+        font-size: 12px
+        font-weight: 700
+
+        place-content: center center

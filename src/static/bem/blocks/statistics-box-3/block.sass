@@ -1,0 +1,15 @@
+.statistics-box-3
+    display: grid
+
+    margin-top: 25px
+
+    grid-template-columns: 1fr
+    gap: 22px
+
+    @media (min-width: 768px)
+        grid-template-columns: repeat(2, 1fr)
+    @media (min-width: 1200px)
+        grid-template-columns: repeat(4, 1fr)
+
+    &__card
+        height: 125px

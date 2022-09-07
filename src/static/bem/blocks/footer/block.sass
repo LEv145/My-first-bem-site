@@ -1,0 +1,33 @@
+@import "../i-font/block"
+
+
+.footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    height: 60px
+    margin-top: 24px
+    padding-right: 15px
+    padding-left: 15px
+
+    background-color: var(--footer-bg)
+
+    &__description
+        color: #adb5bd
+
+        @include i-font_roboto
+        font-size: 12px
+        font-weight: 400
+
+    &__about
+        &-item
+            @at-root a#{&}
+                padding: 10px
+
+                text-decoration: none
+
+                color: var(--meta-default-text-color)
+                @include i-font_roboto
+                font-size: 12px
+                font-weight: 400

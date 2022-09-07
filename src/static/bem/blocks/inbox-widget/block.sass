@@ -1,0 +1,58 @@
+@import "../i-font/block"
+
+
+.inbox-widget
+    display: flex
+    flex-direction: column
+
+    &__item
+        display: flex
+        justify-content: space-between
+
+        padding-top: 12px
+        padding-bottom: 12px
+
+        border-bottom: 1px solid hsla(218, 16%, 27%, 0.5)
+
+        &-user
+            display: flex
+
+            &-avatar
+                @at-root img#{&}
+                    width: 40px
+                    height: 40px
+
+                    border-radius: 50%
+
+            &-text
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+
+                margin-left: 15px
+
+                &-name
+                    color: var(--default-text-color)
+
+                    @include i-font_karla
+                    font-size: 15px
+                    font-weight: 600
+                    line-height: 16.5px
+
+                &-phrase
+                    color: var(--meta-default-text-color)
+
+                    @include i-font_roboto
+                    font-size: 13px
+                    font-weight: 400
+                    line-height: 19.5px
+
+                    grid-area: text
+
+        &-time
+            color: var(--meta-default-text-color)
+
+            @include i-font_roboto
+            font-size: 11px
+            font-weight: 400
+            line-height: 16.5px

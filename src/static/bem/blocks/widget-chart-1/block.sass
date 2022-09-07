@@ -1,0 +1,35 @@
+@import "../i-font/block"
+
+
+.widget-chart-1
+    display: flex
+    justify-content: space-between
+
+    height: 75px
+
+    &__circular-progress-bar
+        width: 75px
+
+        background-color: white
+
+    &__revenue-box
+        width: 100px
+        padding-top: 12px
+
+        &-title
+            text-align: right
+
+            color: white
+
+            @include i-font_karla
+            font-size: 30px
+            font-weight: 400
+
+        &-description
+            text-align: right
+
+            color: var(--meta-default-text-color)
+
+            @include i-font_roboto
+            font-size: 14.4px
+            font-weight: 400

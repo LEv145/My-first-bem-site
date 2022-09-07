@@ -3,7 +3,6 @@ let concat = require("gulp-concat");
 let concatCss = require("gulp-concat-css");
 let browserSync = require("browser-sync");
 let sass = require('gulp-sass')(require('sass'));
-let rename = require("gulp-rename");
 let pug = require("gulp-pug");
 
 

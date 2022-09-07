@@ -1,0 +1,53 @@
+@import "../i-font/block"
+
+
+.profile-box
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__logo
+        @at-root img#{&}
+            width: 72px
+            height: 72px
+
+            border-radius: 50%
+
+    &__info-box
+        &-name
+            color: rgb(247, 247, 247)
+
+            @include i-font_karla
+            font-size: 15px
+            font-weight: 600
+            line-height: 16.5px
+
+        &-email
+            margin-top: 6px
+
+            color: var(--meta-default-text-color)
+
+            @include i-font_roboto
+            font-size: 13px
+            font-weight: 400
+            line-height: 19.5px
+
+        &-status
+            margin-top: 12px
+
+            @include i-font_roboto
+            font-size: 12px
+            font-weight: 700
+            line-height: 18px
+
+            &[data-theme="admin"]
+                color: rgb(249, 200, 81)
+
+            &[data-theme="desiner"]
+                color: rgb(16, 196, 105)
+
+            &[data-theme="support"]
+                color: rgb(255, 138, 204)
+
+            &[data-theme="developer"]
+                color: rgb(53, 184, 224)

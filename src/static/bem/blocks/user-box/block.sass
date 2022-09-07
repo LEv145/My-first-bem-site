@@ -1,0 +1,40 @@
+@import "../i-font/block"
+
+
+
+.user-box
+    display: flex
+    align-items: center
+
+    &__icon
+        @at-root img#{&}
+            width: 32px
+            height: 32px
+
+            border-radius: 50%
+
+    &__title
+        margin-left: 6px
+
+        color: #dee2e6
+
+        font-size: 14.4px
+
+
+        &-name
+            color: inherit
+
+            @include i-font_roboto
+            font-size: inherit
+            font-weight: 400
+
+        &-icon
+            cursor: pointer
+
+            color: inherit
+
+            @include i-font_feather()
+            font-size: inherit
+
+            &::after
+                content: "\e842"

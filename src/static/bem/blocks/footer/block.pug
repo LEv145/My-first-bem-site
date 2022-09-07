@@ -1,0 +1,8 @@
+mixin footer(data)
+    //- type: {description: str, links: [{href: str, title: str}, ...]}
+
+    footer.footer&attributes(attributes)
+        .footer__description #{data.description}
+        .footer__about
+            each item in data.links
+                a(href=item.href class="footer__about-item") #{item.title}
