@@ -1,0 +1,45 @@
+.notification-box
+    position: relative
+
+    display: grid
+
+    width: 50px
+
+    background-image: url("image.jpg")
+
+    place-content: center center
+
+.notification-box__icon
+    position: relative
+
+    cursor: pointer
+
+    color: #dee2e6
+
+    font-family: "feather" !important
+    font-size: 21px
+
+    &::before
+        content: "\e836"
+
+
+.notification-box__counter
+    position: absolute
+    top: 16px
+    right: 10px
+
+    display: grid
+
+    box-sizing: border-box
+    width: 16px
+    height: 16px
+
+    color: #fff
+    border-radius: 50%
+    background-color: #ff5b5b
+
+    font-family: Roboto, sans-serif
+    font-size: 12px
+    font-weight: 700
+
+    place-content: center center
