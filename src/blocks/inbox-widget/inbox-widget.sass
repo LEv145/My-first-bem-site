@@ -11,45 +11,45 @@
 
         border-bottom: 1px solid hsla(218, 16%, 27%, 0.5)
 
-        &-user
+    &__item-user
             display: flex
 
-            &-avatar 
-                @at-root img#{&}
-                    width: 40px
-                    height: 40px
+    &__item-user-avatar
+        @at-root img#{&}
+            width: 40px
+            height: 40px
 
-                    border-radius: 50%
+            border-radius: 50%
 
-            &-text 
-                display: flex
-                flex-direction: column
-                justify-content: space-between            
+    &__item-user-text
+        display: flex
+        flex-direction: column
+        justify-content: space-between
 
-                margin-left: 15px
+        margin-left: 15px
 
-                &-name
-                    color: var(--default-text-color)
+    &__item-user-text-name
+        color: var(--default-text-color)
 
-                    font-family: Karla, sans-serif
-                    font-size: 15px
-                    font-weight: 600
-                    line-height: 16.5px
+        font-family: Karla, sans-serif
+        font-size: 15px
+        font-weight: 600
+        line-height: 16.5px
 
-                &-phrase
-                    color: var(--meta-default-text-color)
+    &__item-user-text-phrase
+        color: var(--meta-default-text-color)
 
-                    font-family: Roboto, sans-serif
-                    font-size: 13px
-                    font-weight: 400
-                    line-height: 19.5px
+        font-family: Roboto, sans-serif
+        font-size: 13px
+        font-weight: 400
+        line-height: 19.5px
 
-                    grid-area: text
-    
-        &-time
-            color: var(--meta-default-text-color)
+        grid-area: text
 
-            font-family: Roboto, sans-serif
-            font-size: 11px
-            font-weight: 400
-            line-height: 16.5px
+    &__item-time
+        color: var(--meta-default-text-color)
+
+        font-family: Roboto, sans-serif
+        font-size: 11px
+        font-weight: 400
+        line-height: 16.5px

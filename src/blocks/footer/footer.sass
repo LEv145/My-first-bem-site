@@ -10,21 +10,20 @@
 
     background-color: var(--footer-bg)
 
-.footer__description
-    color: #adb5bd
+    &__description
+        color: #adb5bd
 
-    font-family: Roboto, sans-serif
-    font-size: 12px
-    font-weight: 400
+        font-family: Roboto, sans-serif
+        font-size: 12px
+        font-weight: 400
 
-// .footer__about
+    &__about-item
+        @at-root a#{&}
+            padding: 10px
 
-.footer__about > a
-    padding: 10px
+            text-decoration: none
 
-    text-decoration: none
-
-    color: var(--meta-default-text-color)
-    font-family: Roboto, sans-serif
-    font-size: 12px
-    font-weight: 400
+            color: var(--meta-default-text-color)
+            font-family: Roboto, sans-serif
+            font-size: 12px
+            font-weight: 400

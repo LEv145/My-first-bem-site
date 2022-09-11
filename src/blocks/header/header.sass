@@ -12,27 +12,27 @@
 
     background-color: var(--body-bg)
 
-a.header__title
-    display: grid
+    &__title
+        @at-root a#{&}
+            display: grid
 
-    box-sizing: border-box
-    width: 140px
+            box-sizing: border-box
+            width: 140px
 
-    text-decoration: none
+            text-decoration: none
 
-    color: var(--default-text-color)
+            color: var(--default-text-color)
 
-    font-family: "Karla", sans-serif
-    font-size: 18px
-    font-weight: 600
+            font-size: 18px
+            font-weight: 600
 
-    place-content: center center
+            place-content: center center
 
-.header__notification-box
-    margin-left: 35px
+    &__notification-box
+        margin-left: 35px
 
-.header__user-box
-    margin-left: 27px
+    &__user-box
+        margin-left: 27px
 
-.header__settings-box
-    margin-left: 27px
+    &__settings-box
+        margin-left: 27px
