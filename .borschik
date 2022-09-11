@@ -1,0 +1,18 @@
+{
+    "freeze_paths" : {
+        "node_modules/bem-core/common.blocks/**": ":base64:",
+        "node_modules/bem-core/common.blocks**/*.svg": ":encodeURIComponent:",
+        "node_modules/bem-core/desktop.blocks/**": ":base64:",
+        "node_modules/bem-core/desktop.blocks**/*.svg": ":encodeURIComponent:",
+        "node_modules/bem-components/common.blocks/**": ":base64:",
+        "node_modules/bem-components/common.blocks**/*.svg": ":encodeURIComponent:",
+        "node_modules/bem-components/desktop.blocks/**": ":base64:",
+        "node_modules/bem-components/desktop.blocks**/*.svg": ":encodeURIComponent:",
+        "node_modules/bem-components/design/common.blocks/**": ":base64:",
+        "node_modules/bem-components/design/common.blocks**/*.svg": ":encodeURIComponent:",
+        "node_modules/bem-components/design/desktop.blocks/**": ":base64:",
+        "node_modules/bem-components/design/desktop.blocks**/*.svg": ":encodeURIComponent:",
+        "src/blocks/**": ":base64:",
+        "src/blocks/**/*.svg": ":encodeURIComponent:"
+    }
+}
